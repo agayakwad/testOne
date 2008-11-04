@@ -80,6 +80,9 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         private Int32 _cityId;
         private Int32 _countryId;
        // private bool _IsAdmin;
+        private int _departmentId;
+
+      
         private DateTime _lastLoginTime;
 
         #endregion
@@ -101,6 +104,16 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         {
             get { return _id; }
             set { _id = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the DepartmentId.
+        /// </summary>
+        /// <value>The DepartmentId</value>
+        public int DepartmentId
+        {
+            get { return _departmentId; }
+            set { _departmentId = value; }
         }
 
         /// <summary>
