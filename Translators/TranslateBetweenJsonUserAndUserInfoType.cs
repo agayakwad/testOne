@@ -40,8 +40,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.Pincode = from.Contact.HomeAddress.Pincode;
               //  to.JsonUserContact = TranslateBetweenJsonUserContactAndContactType.ServiceToBusiness(from.Contact);
                 //to.IsAdmin = from.IsAdmin;
-                if (from.LastLoginTime != null)
+                if (from.LastLoginTime == null)
+                    to.LastLoginTime = DateTime.Now;
+                else
                     to.LastLoginTime = from.LastLoginTime.Value;
+                    
                 return to;
                 
            
