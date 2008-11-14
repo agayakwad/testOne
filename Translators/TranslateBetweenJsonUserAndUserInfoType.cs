@@ -73,6 +73,14 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             to.Contact.HomeAddress.City = from.City;
             to.Contact.HomeAddress.Country = from.Country;
             to.Contact.HomeAddress.Pincode = from.Pincode;
+            if (to.LastLoginTime == null)
+            {
+                to.LastLoginTime = DateTime.Now;
+            }
+            else
+            {
+                to.LastLoginTime = from.LastLoginTime;
+            }
            // to.Contact = TranslateBetweenJsonUserContactAndContactType.BusinessToService(from.JsonUserContact);
            // to.IsAdmin = from.IsAdmin;
             return to;
