@@ -11,6 +11,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Runtime.Serialization;
 using HirePro.Framework.UI.Windows.Business;
 using HirePro.Framework.UI.Windows.Business.Base.Utility;
+using HiRePro.JSONServiceLayer.CommonManagement.DataContracts;
 
 namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
 {
@@ -81,6 +82,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         private Int32 _countryId;
        // private bool _IsAdmin;
         private int _departmentId;
+        private bool _isWebRequest;
+        private TypeOfUser _typeOfUser;
+
+      
+   
            
         private DateTime _lastLoginTime;
 
@@ -468,6 +474,29 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
             set { _lastLoginTime = value; }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance is web request.
+        /// </summary>
+        /// <value>
+        /// 	<c>true</c> if this instance is web request; otherwise, <c>false</c>.
+        /// </value>
+        [DataMember]
+        public bool IsWebRequest
+        {
+            get { return _isWebRequest; }
+            set { _isWebRequest = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the type of user.
+        /// </summary>
+        /// <value>The type of user.</value>
+        [DataMember]
+        public TypeOfUser TypeOfUser
+        {
+            get { return _typeOfUser; }
+            set { _typeOfUser = value; }
+        }
         ///// <summary>
         ///// Gets or sets the user profile.
         ///// </summary>
