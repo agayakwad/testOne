@@ -21,7 +21,6 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
            
                 JsonUser to = new JsonUser();
                 to.LoginName = from.LoginName;
-                //((IEditablePrimaryKey)to).Key = from.Id;
                 to.Password = from.Password;
                 to.PasswordQuestion = from.PasswordQuestion;
                 to.PasswordAnswer = from.PasswordAnswer;
@@ -38,8 +37,6 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.City = from.Contact.HomeAddress.City;
                 to.Country = from.Contact.HomeAddress.Country;
                 to.Pincode = from.Contact.HomeAddress.Pincode;
-              //  to.JsonUserContact = TranslateBetweenJsonUserContactAndContactType.ServiceToBusiness(from.Contact);
-                //to.IsAdmin = from.IsAdmin;
                 if (from.LastLoginTime == null)
                     to.LastLoginTime = DateTime.Now;
                 else
@@ -81,8 +78,6 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             {
                 to.LastLoginTime = from.LastLoginTime;
             }
-           // to.Contact = TranslateBetweenJsonUserContactAndContactType.BusinessToService(from.JsonUserContact);
-           // to.IsAdmin = from.IsAdmin;
             return to;
         }
     }
