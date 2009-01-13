@@ -41,7 +41,9 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                     to.LastLoginTime = DateTime.Now;
                 else
                     to.LastLoginTime = from.LastLoginTime.Value;
-                    
+
+                to.TypeOfUser = (HiRePro.JSONServiceLayer.CommonManagement.DataContracts.TypeOfUser)Enum.Parse(typeof(UserLoginType),from.TypeOfUser.ToString());
+
                 return to;
                 
            
@@ -78,6 +80,12 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             {
                 to.LastLoginTime = from.LastLoginTime;
             }
+            if (from.UserTypeValue == "Hiring Manager")
+            {
+                to.TypeOfUser = UserLoginType.HiringManagerUser;
+            }
+            
+            
             return to;
         }
     }

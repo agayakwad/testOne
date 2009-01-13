@@ -48,11 +48,18 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         private bool _isWebRequest;
         private TypeOfUser _typeOfUser;
         private DateTime _lastLoginTime;
+        private string userTypeValue;
 
+       
         #endregion
 
         #region Properties
-
+        [DataMember]
+        public string UserTypeValue
+        {
+            get { return userTypeValue; }
+            set { userTypeValue = value; }
+        }
         /// <summary>
         /// Gets or sets the id.
         /// </summary>
