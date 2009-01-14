@@ -37,6 +37,10 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.City = from.Contact.HomeAddress.City;
                 to.Country = from.Contact.HomeAddress.Country;
                 to.Pincode = from.Contact.HomeAddress.Pincode;
+                to.EmailPassword = from.EmailPassword;
+                to.IsEmailExtractionRequired = from.IsEmailExtractionRequired;
+                to.IsPop3Listener = from.IsPop3Listener;
+
                 if (from.LastLoginTime == null)
                     to.LastLoginTime = DateTime.Now;
                 else
@@ -72,6 +76,10 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             to.Contact.HomeAddress.City = from.City;
             to.Contact.HomeAddress.Country = from.Country;
             to.Contact.HomeAddress.Pincode = from.Pincode;
+            to.IsEmailExtractionRequired = from.IsEmailExtractionRequired;
+            to.IsPop3Listener = from.IsPop3Listener;
+            to.EmailPassword = from.EmailPassword;
+
             if (to.LastLoginTime == null)
             {
                 to.LastLoginTime = DateTime.Now;
