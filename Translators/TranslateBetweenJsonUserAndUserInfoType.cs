@@ -92,7 +92,10 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             {
                 to.TypeOfUser = UserLoginType.HiringManagerUser;
             }
-            
+            if (from.UserTypeValue == "Ams User")
+            {
+                to.TypeOfUser = UserLoginType.HireProUser;
+            }
             
             return to;
         }
