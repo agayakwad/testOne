@@ -51,7 +51,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         private string userTypeValue;
         private bool _isPop3Listener;
         private string _emailPassword;
-        private bool _isEmailExtractionRequired;        
+        private bool _isEmailExtractionRequired;
+        private bool _isAdmin;
         #endregion
 
         #region Properties
@@ -321,6 +322,13 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         {
             get { return _emailPassword; }
             set { _emailPassword = value; }
+        }
+
+        [DataMember]
+        public bool IsAdmin
+        {
+            get { return _isAdmin; }
+            set { _isAdmin = value; }
         }
         #endregion
     }

@@ -40,6 +40,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.EmailPassword = from.EmailPassword;
                 to.IsEmailExtractionRequired = from.IsEmailExtractionRequired;
                 to.IsPop3Listener = from.IsPop3Listener;
+                to.IsAdmin = from.IsAdmin;
 
                 if (from.LastLoginTime == null)
                     to.LastLoginTime = DateTime.Now;
@@ -79,6 +80,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             to.IsEmailExtractionRequired = from.IsEmailExtractionRequired;
             to.IsPop3Listener = from.IsPop3Listener;
             to.EmailPassword = from.EmailPassword;
+            to.IsAdmin = from.IsAdmin;
 
             if (to.LastLoginTime == null)
             {
