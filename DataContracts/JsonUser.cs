@@ -12,13 +12,14 @@ using System.Runtime.Serialization;
 using HirePro.Framework.UI.Windows.Business;
 using HirePro.Framework.UI.Windows.Business.Base.Utility;
 using HiRePro.JSONServiceLayer.CommonManagement.DataContracts;
+using System.Collections.Generic;
 
 namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
 {
 
 
     [DataContract]
-    public partial class JsonUser 
+    public partial class JsonUser
     {
         #region Fields
 
@@ -127,7 +128,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
             get { return _email1; }
             set { _email1 = value; }
         }
-     
+
         /// <summary>
         /// Gets or sets the name of the login.
         /// </summary>
@@ -333,12 +334,41 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         #endregion
     }
 
-        
 
-        
-        
 
-        
-        
-        
+
+    [DataContract]
+    public  class JsonActionModule
+    {
+        [DataMember]
+        public int ModuleId
+        {
+            get;
+            set;
+        }
+        [DataMember]
+        public List<JsonAction> ActionCollection
+        {
+            get;
+            set;
+        }
+          
+    }
+    [DataContract]
+    public class JsonAction
+    {
+        [DataMember]
+        public int ActionId
+        {
+            get;
+            set;
+        }
+        [DataMember] 
+        public string ActionName
+        {
+            get;
+            set;
+        }
+    }
+
 }
