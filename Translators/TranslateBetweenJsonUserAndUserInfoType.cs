@@ -11,7 +11,6 @@ using System.Web.UI.WebControls.WebParts;
 using HiRePro.JSONServiceLayer.UserManagement.DataContracts;
 using Common.ServiceProxies.UserManagement;
 using HirePro.Framework.UI.Windows.Business.Base.Core;
-using HirePro.Framework.Core.Utility.Enums;
 
 namespace HiRePro.JSONServiceLayer.UserManagement.Translators
 {
@@ -92,16 +91,14 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             {
                 to.LastLoginTime = from.LastLoginTime;
             }
-            //if (from.UserTypeValue == "Hiring Manager")
-            //{
-            //    to.TypeOfUser = UserLoginType.HiringManagerUser;
-            //}
-            //if (from.UserTypeValue == "Ams User")
-            //{
-            //    to.TypeOfUser = UserLoginType.HireProUser;
-            //}
-
-            to.TypeOfUser = EnumAdapter.GetEnumValue<UserLoginType>(from.TypeOfUser);
+            if (from.UserTypeValue == "Hiring Manager")
+            {
+                to.TypeOfUser = UserLoginType.HiringManagerUser;
+            }
+            if (from.UserTypeValue == "Ams User")
+            {
+                to.TypeOfUser = UserLoginType.HireProUser;
+            }
             
             return to;
         }
