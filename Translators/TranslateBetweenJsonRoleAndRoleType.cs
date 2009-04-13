@@ -14,28 +14,15 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
 {
     public static class TranslateBetweenJsonRoleAndRoleType
     {
-        //public static CreateRoleRequest BusinessToService(JsonRole from)
-        //{
-        //    if (from != null)
-        //    {
-        //        CreateRoleRequest to = new CreateRoleRequest();
-        //        to.Role = new RoleType();
-        //        to.Role.Description = from.Description;
-        //        to.Role.Name = from.Name;
-                
-        //    }
-        //    return to;
-           
-        //}
-
-        public static JsonRole ServiceToBusiness(CreateRoleRequest from)
+        
+        public static JsonRole ServiceToBusiness(RoleType from)
         {
             JsonRole to = new JsonRole();
             if (from != null)
-            {
-                to.Description = from.Role.Description;
-                to.Name = from.Role.Name;
-               
+            {    
+                to.Description = from.Description;
+                to.Name = from.Name;
+                to.ObjectId = from.Id;                
             }
             return to;
            

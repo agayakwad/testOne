@@ -21,6 +21,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         #region Fields 
         private string _name;
         private string _description;
+        private int _objectId;
       
         #endregion
 
@@ -38,6 +39,14 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         {
             get { return _description; }
             set { _description = value; }
+        }
+
+        [DataMember]
+        public int ObjectId
+        {
+            get { return _objectId; }
+            set { _objectId = value; }
+
         }
         #endregion
     }
