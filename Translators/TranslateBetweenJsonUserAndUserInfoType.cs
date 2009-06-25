@@ -80,7 +80,6 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             if (from.Password != null)
             {
                 to.Password = from.Password;
-
             }
             
             to.LoginName = from.LoginName;
@@ -89,7 +88,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
             to.PasswordAnswer = from.PasswordAnswer;
             to.Signature = from.Signature;
             to.Contact = new ContactType();
-            
+
             if (from.FirstName != null)
             {
                 from.FirstName = from.FirstName.Trim();
