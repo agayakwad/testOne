@@ -11,40 +11,41 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Runtime.Serialization;
 using HiRePro.JSONServiceLayer.JSONInfrastructureServices.InfraDataContracts;
+using HiRePro.JSONServiceLayer.BaseResponse;
 
 namespace HiRePro.JSONServiceLayer.UserManagement
 {
     [DataContract]
-    public class JForgetPasswordResponse : AjaxCommonCriteria
+    public class JsonForgetPasswordResponse : ResponseBase
     {
-        private string _hintQue;
-        private string _hintAns;
-        private int _userId;
-        private string _userName;
+        #region Properties
+        /// <summary>
+        /// Gets or sets the name of the user.
+        /// </summary>
+        /// <value>The name of the user.</value>
+        [DataMember]
+        public string UserName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the U id.
+        /// </summary>
+        /// <value>The U id.</value>
         [DataMember]
-        public string UserName
-        {
-            get { return _userName; }
-            set { _userName = value; }
-        }
+        public int UserId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the hint answer.
+        /// </summary>
+        /// <value>The hint answer.</value>
         [DataMember]
-        public int UId
-        {
-            get { return _userId; }
-            set { _userId = value; }
-        }
+        public string HintAnswer { get; set; }
+
+        /// <summary>
+        /// Gets or sets the hint question.
+        /// </summary>
+        /// <value>The hint question.</value>
         [DataMember]
-        public string HintAns
-        {
-            get { return _hintAns; }
-            set { _hintAns = value; }
-        }
-        [DataMember]
-        public string HintQue
-        {
-            get { return _hintQue; }
-            set { _hintQue = value; }
-        }
+        public string HintQuestion { get; set; } 
+        #endregion
     }
 }

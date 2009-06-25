@@ -8,27 +8,14 @@ using HiRePro.JSONServiceLayer.CommonManagement.DataContracts;
 namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
 {
     [DataContract]
-    public class JsonChangePasswordRequest
+    public class JsonChangePasswordRequest : JsonTenantAdamInfo
     {
         #region Fields
         private string _oldPassword;
         private string _newPassword;
-        private JsonTenantAdamInfo tenantInfo;
         #endregion
 
         #region Properties
-
-
-        /// <summary>
-        /// Gets or sets the tenant info.
-        /// </summary>
-        /// <value>The tenant info.</value>
-        [DataMember]
-        public JsonTenantAdamInfo TenantInfo
-        {
-            get { return tenantInfo; }
-            set { tenantInfo = value; }
-        }
 
         /// <summary>
         /// Gets or sets the new password.
