@@ -45,7 +45,10 @@ namespace HiRePro.JSONServiceLayer.UserManagement
         /// </summary>
         /// <value>The hint question.</value>
         [DataMember]
-        public string HintQuestion { get; set; } 
+        public string HintQuestion { get; set; }
+
+        [DataMember]
+        public string TargetPanel { get; set; }
         #endregion
     }
 }

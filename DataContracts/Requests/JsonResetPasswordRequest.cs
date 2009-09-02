@@ -11,13 +11,16 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
     public class JsonResetPasswordRequest
     {
         #region Fields
+        
         private string _targetPanel;
         private int _userId;
         private string _newPassword;
         private int _tenantId;
+        private bool _sendNotificationMail;
         #endregion
 
         #region Properties
+
         [DataMember]
         public string TargetPanel
         {
@@ -42,6 +45,12 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
         {
             get { return _tenantId; }
             set { _tenantId = value; }
+        }
+        [DataMember]
+        public bool SendNotificationMail
+        {
+            get { return _sendNotificationMail; }
+            set { _sendNotificationMail = value; }
         }
         #endregion
     }
