@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using HiRePro.JSONServiceLayer.CommonManagement.DataContracts;
 using System.Runtime.Serialization;
-using HiRePro.Utility.Cache;
+//using HiRePro.Utility.Cache;
 using HiRePro.JSONServiceLayer.Helper;
 using ClientBusiness.Services.Services;
 
@@ -67,11 +67,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
         {
             get
             {
-                if (TenantId != null && UserId != null)
+                if (TenantId != 0 && UserId != 0)
                 {
                     if (Cache == null)
                     {
-                        Cache = new JsonEnterpriseLibraryCacheService();
+                        Cache = new EnterpriseLibraryCacheService();
                     }
                     int tenantID = int.Parse(HelperUtility.MD5Decrypt(TenantId.ToString()));
                     int userID = int.Parse(HelperUtility.MD5Decrypt(UserId.ToString()));
