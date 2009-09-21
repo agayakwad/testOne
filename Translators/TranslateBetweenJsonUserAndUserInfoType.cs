@@ -38,9 +38,9 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.PasswordQuestion = from.PasswordQuestion;
                 to.PasswordAnswer = from.PasswordAnswer;
                 to.Signature = from.Signature;
-                //to.FirstName = from.Contact.FirstName;
-                //to.MiddleName = from.Contact.MiddleName;
-                //to.LastName = from.Contact.LastName;
+                to.FirstName = from.NameContact.FirstName;
+                to.MiddleName = from.NameContact.MiddleName;
+                to.LastName = from.NameContact.LastName;
                 if (from.Contact != null)
                 {
                     to.Email1 = from.Contact.Email1;
