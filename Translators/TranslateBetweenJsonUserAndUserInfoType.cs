@@ -46,7 +46,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                     to.Email1 = from.Contact.Email1;
                     to.Email2 = from.Contact.Email2;
                     to.PhoneOffice = from.Contact.PhoneOffice;
-                    //to.PhoneOther = from.Contact.PhoneOther;
+                    to.PhoneOther = from.Contact.Mobile1;
                     to.Street = from.Contact.Address1;
                 }
                 //to.State = from.Contact.HomeAddress.State;
@@ -136,7 +136,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.Contact.Email1 = from.Email1;
                 to.Contact.Email2 = from.Email2;
                 to.Contact.PhoneOffice = from.PhoneOffice;
-                //to.Contact.PhoneOther = from.PhoneOther;
+                to.Contact.Mobile1 = from.PhoneOther;
                 //to.Contact.HomeAddress = new AddressType();
                 to.Contact.Address1 = from.Street;
                 //to.Contact.HomeAddress.State = from.State;
