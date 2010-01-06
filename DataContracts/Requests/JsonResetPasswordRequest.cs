@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using HiRePro.JSONServiceLayer.CommonManagement.DataContracts;
 using System.Runtime.Serialization;
-//using HiRePro.Utility.Cache;
 using HiRePro.JSONServiceLayer.Helper;
 using ClientBusiness.Services.Services;
 
