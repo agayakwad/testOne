@@ -9,7 +9,7 @@ using ClientBusiness.Services.Services;
 namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
 {
     [DataContract]
-    public class JsonForgetPasswordRequest 
+    public class JsonForgetPasswordRequest : JsonTenantAdamInfo
     {
         #region Properties
 
@@ -32,14 +32,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
         /// </summary>
         /// <value>The mail id.</value>
         [DataMember]
-        public string MailId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the tenant id.
-        /// </summary>
-        /// <value>The tenant id.</value>
-        [DataMember]
-        public int TenantId { get; set; }
+        public string MailId { get; set; } 
 
         /// <summary>
         /// Gets or sets the tenant adam info.
