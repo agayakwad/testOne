@@ -12,5 +12,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
     {
         [DataMember]
         public JsonPagingCriteria PagingCriteria { get; set; }
+
+        [DataMember]
+        public TypeOfUser TypeOfUser { get; set; }
     }
 }
