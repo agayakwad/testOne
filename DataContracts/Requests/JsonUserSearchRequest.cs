@@ -23,6 +23,10 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
         public string UserName { get; set; }
 
         [DataMember]
+        public string LoginName { get; set; }
+
+
+        [DataMember]
         public string Email { get; set; }
 
 
