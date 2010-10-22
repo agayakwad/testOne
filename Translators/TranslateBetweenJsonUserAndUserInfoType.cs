@@ -65,7 +65,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 else
                     to.LastLoginTime = from.LastLoginTime.Value;
 
-                to.TypeOfUser = (HiRePro.JSONServiceLayer.CommonManagement.DataContracts.TypeOfUser)Enum.Parse(typeof(UserLoginType), from.TypeOfUser.ToString());
+                to.TypeOfUser = (HiRePro.JSONServiceLayer.CommonManagement.DataContracts.TypeOfUser)Enum.Parse(typeof(UserOfType), from.TypeOfUser.ToString());
             }
             return to;
 
@@ -158,7 +158,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                     to.LastLoginTime = from.LastLoginTime;
                 }
 
-                to.TypeOfUser = EnumAdapter.GetEnumValue<UserLoginType>(from.TypeOfUser);
+                to.TypeOfUser = EnumAdapter.GetEnumValue<UserOfType>(from.TypeOfUser);
             }
             return to;
         }
