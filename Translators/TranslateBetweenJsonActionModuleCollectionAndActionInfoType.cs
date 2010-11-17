@@ -29,8 +29,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                                     JsonAction action = new JsonAction();
                                     action.ActionName = from[i].Name;
                                     action.ActionId = from[i].Id;
-                                    to[j].ActionCollection.Add(action);
-                                    break;
+                                    if (to[j].ModuleId == from[i].ModuleId)
+                                    {
+                                        to[j].ActionCollection.Add(action);
+                                        break;
+                                    }
                                 }
                                 else
                                 {
