@@ -65,6 +65,14 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         #region Properties
 
         [DataMember]
+        public bool IsPasswordChangedRequired { get; set; }
+        [DataMember]
+        public string BrowserDetails { get; set; }
+
+        [DataMember]
+        public string OperatingSystemDetails { get; set; }
+
+        [DataMember]
         public bool? IsMasterVendorUser
         {
             get { return _isMasterVendorUser; }
