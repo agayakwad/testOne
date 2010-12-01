@@ -23,6 +23,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to = TranslateBetweenJsonUserAndUserInfoType.ServiceToBusiness(from.userInfoType);
                 if (from.RoleTypes != null && from.RoleTypes.Length != 0)
                 {
+                    to.RoleCollection = new System.Collections.Generic.List<JsonRole>();
                     for (int count = 0; count < from.RoleTypes.Length; count++)
                     {
                         JsonRole role = TranslateBetweenJsonRoleAndRoleType.ServiceToBusiness(from.RoleTypes[count]);
