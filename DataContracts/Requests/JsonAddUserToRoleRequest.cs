@@ -16,6 +16,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
         [DataMember]
         public string UserName { get; set; }
 
+        [DataMember]
+        public string[] UpdateAddedRoleName { get; set; }
+
+        [DataMember]
+        public string[] UpdateRemovedRoleName { get; set; }
 
     }
 }
