@@ -21,6 +21,13 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
             get { return _jsonUser; }
             set { _jsonUser = value; }
         }
+
+        [DataMember]
+        public string BrowserDetails { get; set; }
+
+        [DataMember]
+        public string OperatingSystemDetails { get; set; }
+
         #endregion
 
 
