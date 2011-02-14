@@ -316,6 +316,12 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         }
 
         /// <summary>
+        /// Gets or sets the last login IP.
+        /// </summary>
+        /// <value>The last login IP.</value>
+        [DataMember]
+        public string LastLoginIP { get; set; }
+        /// <summary>
         /// Gets or sets a value indicating whether this instance is web request.
         /// </summary>
         /// <value>

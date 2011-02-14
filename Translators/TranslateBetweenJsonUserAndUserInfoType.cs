@@ -60,10 +60,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.Id = from.Id;
                 to.IsAdmin = from.IsAdmin;
 
-                if (from.LastLoginTime == null)
-                    to.LastLoginTime = DateTime.Now;
-                else
+                if (from.LastLoginTime.HasValue)
                     to.LastLoginTime = from.LastLoginTime.Value;
+
+                if (!string.IsNullOrEmpty(from.LastLoginIP))
+                    to.LastLoginIP = from.LastLoginIP;
 
                 to.TypeOfUser = (HiRePro.JSONServiceLayer.CommonManagement.DataContracts.TypeOfUser)Enum.Parse(typeof(UserOfType), from.TypeOfUser.ToString());
             }
