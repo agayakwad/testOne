@@ -50,7 +50,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         private int _departmentId;
         private bool _isWebRequest;
         private TypeOfUser _typeOfUser;
-        private DateTime _lastLoginTime;
+        private DateTime? _lastLoginTime;
         private string userTypeValue;
         private bool _isPop3Listener;
         private string _emailPassword;
@@ -309,7 +309,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
 
 
         [DataMember]
-        public DateTime LastLoginTime
+        public DateTime? LastLoginTime
         {
             get { return _lastLoginTime; }
             set { _lastLoginTime = value; }
