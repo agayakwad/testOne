@@ -15,5 +15,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
 
         [DataMember]
         public TypeOfUser TypeOfUser { get; set; }
+
+        [DataMember]
+        public JsonUserSearch UserSearchCriteria { get; set; }
     }
 }
