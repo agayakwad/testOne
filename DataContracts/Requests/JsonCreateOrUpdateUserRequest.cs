@@ -23,6 +23,9 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
             get { return _jsonUser; }
             set { _jsonUser = value; }
         }
+
+        [DataMember]
+        public JsonRole[] RoleType { get; set; }
       
         #endregion
     }
