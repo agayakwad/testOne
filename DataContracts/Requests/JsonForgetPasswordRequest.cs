@@ -41,6 +41,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
         [DataMember]
         public JsonTenantAdamInfo TenantAdamInfo { get; set; }
 
+        [DataMember]
+        public TypeOfUser TypeOfUser { get; set; }
         #endregion
     }
 }
