@@ -383,7 +383,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         public string Token { get; set; }
 
         [DataMember]
-        public List<JsonRole> RoleCollection { get; set; }
+        public List<JsonRole> RoleCollection { get; set; } 
         #endregion
     }
 
