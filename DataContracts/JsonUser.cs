@@ -196,7 +196,13 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
             get { return _passwordAnswer; }
             set { _passwordAnswer = value; }
         }
-
+        /// <summary>
+        /// Gets or sets the Designation.
+        /// </summary>
+        /// <value>The Designation.</value>
+        [DataMember]
+        public int? DesignationId
+        { get; set; }
 
         /// <summary>
         /// Gets or sets the password.
