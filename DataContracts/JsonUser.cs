@@ -63,7 +63,18 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         #endregion
 
         #region Properties
-
+        /// <summary>
+        /// Gets or sets the departmenttext.
+        /// </summary>
+        /// <value>The departmenttext.</value>
+        [DataMember]
+        public string DepartmentText { get; set; }
+        /// <summary>
+        /// Gets or sets the designationtext.
+        /// </summary>
+        /// <value>The designationtext.</value>
+        [DataMember]
+        public string DesignationText { get; set; }
         [DataMember]
         public bool IsPasswordChangedRequired { get; set; }
         [DataMember]
