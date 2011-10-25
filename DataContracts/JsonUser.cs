@@ -401,6 +401,9 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
 
         [DataMember]
         public List<JsonRole> RoleCollection { get; set; } 
+
+        [DataMember]
+        public string RolesAssigned { get; set; } 
         #endregion
     }
 

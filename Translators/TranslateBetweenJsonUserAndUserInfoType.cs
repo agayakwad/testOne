@@ -59,7 +59,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.IsPop3Listener = from.IsPop3Listener;
                 to.Id = from.Id;
                 to.IsAdmin = from.IsAdmin;
-
+                to.RolesAssigned = from.RolesAssigned;
                 if (from.LastLoginTime.HasValue)
                     to.LastLoginTime = from.LastLoginTime.Value;
 
@@ -156,7 +156,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.IsPop3Listener = from.IsPop3Listener;
                 to.EmailPassword = from.EmailPassword;
                 to.IsAdmin = from.IsAdmin;
-
+                to.RolesAssigned = from.RolesAssigned;
                 if (to.LastLoginTime == null)
                 {
                     to.LastLoginTime = DateTime.Now;
