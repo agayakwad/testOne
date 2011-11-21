@@ -75,6 +75,12 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         /// <value>The designationtext.</value>
         [DataMember]
         public string DesignationText { get; set; }
+        /// <summary>
+        /// Gets or sets the activity vendor text.
+        /// </summary>
+        /// <value>The activity vendor text.</value>
+        [DataMember]
+        public string ActivityVendorText { get; set; }
         [DataMember]
         public bool IsPasswordChangedRequired { get; set; }
         [DataMember]
@@ -82,6 +88,9 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
 
         [DataMember]
         public string OperatingSystemDetails { get; set; }
+
+        [DataMember]
+        public int? ActivityVendorId { get; set; }
 
         [DataMember]
         public bool? IsMasterVendorUser
