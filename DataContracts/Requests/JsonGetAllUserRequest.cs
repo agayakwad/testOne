@@ -18,5 +18,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
 
         [DataMember]
         public JsonUserSearch UserSearchCriteria { get; set; }
+
+        [DataMember]
+        public bool? IsDisabled { get; set; }
     }
 }

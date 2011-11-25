@@ -25,6 +25,10 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests {
 
         [DataMember]
         public ObjectState ObjectState { get; set; }
+
+        [DataMember]
+        public bool? IsDisabled { get; set; }
+
         #endregion
     }
 }

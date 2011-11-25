@@ -412,7 +412,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         public List<JsonRole> RoleCollection { get; set; } 
 
         [DataMember]
-        public string RolesAssigned { get; set; } 
+        public string RolesAssigned { get; set; }
+
+        [DataMember]
+        public bool? IsDisabled { get; set; }
+
         #endregion
     }
 
