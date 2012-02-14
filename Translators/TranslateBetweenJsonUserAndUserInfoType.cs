@@ -70,10 +70,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
 
                 if (!string.IsNullOrEmpty(from.LastLoginIP))
                     to.LastLoginIP = from.LastLoginIP;
-                //to.DepartmentId = from.DepartmentId;
-                //if (from.DesignationId.HasValue) {
-                //    to.DesignationId = from.DesignationId.Value;
-                //}
+                to.DepartmentId = from.DepartmentId;
+                if (from.DesignationId.HasValue)
+                {
+                    to.DesignationId = from.DesignationId.Value;
+                }
                 to.TypeOfUser = (HiRePro.JSONServiceLayer.CommonManagement.DataContracts.TypeOfUser)Enum.Parse(typeof(UserOfType), from.TypeOfUser.ToString());
             }
             return to;
@@ -117,10 +118,10 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 to.PasswordQuestion = from.PasswordQuestion;
                 to.PasswordAnswer = from.PasswordAnswer;
                 to.Signature = from.Signature;
-               // to.DepartmentId = from.DepartmentId;
+                to.DepartmentId = from.DepartmentId;
                 if (from.DesignationId.HasValue)
                 {
-                    //to.DesignationId = from.DesignationId.Value;
+                    to.DesignationId = from.DesignationId.Value;
                 }
 
                 if (from.FirstName != null)
