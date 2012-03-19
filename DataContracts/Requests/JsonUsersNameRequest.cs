@@ -29,6 +29,12 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests {
         [DataMember]
         public bool? IsDisabled { get; set; }
 
+        [DataMember]
+        public int[] UsersExceptInTheseRolesIds { get; set; }
+
+        [DataMember]
+        public int[] UsersInTheseRolesIds { get; set; }
+
         #endregion
     }
 }
