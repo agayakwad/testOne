@@ -36,5 +36,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
         /// <value>The name of the user.</value>
         [DataMember]
         public string UserName { get; set; }
+
+        [DataMember]
+        public int[] SourceIds { get; set; }
     }
 }

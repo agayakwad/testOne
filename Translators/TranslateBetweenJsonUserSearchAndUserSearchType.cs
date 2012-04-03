@@ -21,7 +21,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 if (!string.IsNullOrEmpty(from.UserName))
                     to.UserName = from.UserName;
                 if (from.RoleIds != null && from.RoleIds.Length > 0)
-                    to.RoleIds = from.RoleIds;
+                    to.RoleIds = from.RoleIds; 
+                to.SourceIds = from.SourceIds;
             }
             return to;
         }
