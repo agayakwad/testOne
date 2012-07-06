@@ -23,6 +23,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                 if (from.RoleIds != null && from.RoleIds.Length > 0)
                     to.RoleIds = from.RoleIds; 
                 to.SourceIds = from.SourceIds;
+                to.IsRolesNotIn = from.IsRolesNotIn;
             }
             return to;
         }

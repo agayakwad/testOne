@@ -39,5 +39,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts
 
         [DataMember]
         public int[] SourceIds { get; set; }
+
+        [DataMember]
+        public bool IsRolesNotIn { get; set; }
     }
 }
