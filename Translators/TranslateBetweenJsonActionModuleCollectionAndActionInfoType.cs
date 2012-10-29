@@ -10,7 +10,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
 {
     public static class TranslateBetweenJsonActionModuleCollectionAndActionInfoType
     {
-        public static List<JsonActionModule> ServiceToBusiness(Common.ServiceProxies.UserManagement.ActionType[] from)
+        public static List<JsonActionModule> ServiceToBusiness(ActionsGetAllDTOType[] from)
         {
             List<JsonActionModule> to = new List<JsonActionModule>();
             List<int> moduleIds = new List<int>();
@@ -24,12 +24,12 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                         {
                             for (int j = 0; j < to.Count; j++)
                             {
-                                if (moduleIds.Contains(from[i].ModuleId))
+                                if (from[i].ModuleId.HasValue && moduleIds.Contains(from[i].ModuleId.Value))
                                 {
                                     JsonAction action = new JsonAction();
-                                    action.ActionName = from[i].Name;
-                                    action.ActionId = from[i].Id;
-                                    if (to[j].ModuleId == from[i].ModuleId)
+                                    action.ActionName = from[i].ActionName;
+                                    action.ActionId = from[i].ActionId;
+                                    if (to[j].ModuleId == from[i].ModuleId.Value)
                                     {
                                         to[j].ActionCollection.Add(action);
                                         break;
@@ -38,14 +38,17 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                                 else
                                 {
                                     JsonActionModule actionModule = new JsonActionModule();
-                                    actionModule.ModuleId = from[i].ModuleId;
-                                    moduleIds.Add(from[i].ModuleId);
-                                    JsonAction action = new JsonAction();
-                                    action.ActionName = from[i].Name;
-                                    action.ActionId = from[i].Id;
-                                    actionModule.ActionCollection = new List<JsonAction>();
-                                    actionModule.ActionCollection.Add(action);
-                                    to.Add(actionModule);
+                                    if (from[i].ModuleId.HasValue)
+                                    {
+                                        actionModule.ModuleId = from[i].ModuleId.Value;
+                                        moduleIds.Add(from[i].ModuleId.Value);
+                                        JsonAction action = new JsonAction();
+                                        action.ActionName = from[i].ActionName;
+                                        action.ActionId = from[i].ActionId;
+                                        actionModule.ActionCollection = new List<JsonAction>();
+                                        actionModule.ActionCollection.Add(action);
+                                        to.Add(actionModule);
+                                    }                                    
                                     break;
                                 }
                             }
@@ -54,14 +57,17 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
                         {
 
                             JsonActionModule actionModule = new JsonActionModule();
-                            actionModule.ModuleId = from[i].ModuleId;
-                            moduleIds.Add(from[i].ModuleId);
-                            JsonAction action = new JsonAction();
-                            action.ActionName = from[i].Name;
-                            action.ActionId = from[i].Id;
-                            actionModule.ActionCollection = new List<JsonAction>();
-                            actionModule.ActionCollection.Add(action);
-                            to.Add(actionModule);
+                            if (from[i].ModuleId.HasValue)
+                            {
+                                actionModule.ModuleId = from[i].ModuleId.Value;
+                                moduleIds.Add(from[i].ModuleId.Value);
+                                JsonAction action = new JsonAction();
+                                action.ActionName = from[i].ActionName;
+                                action.ActionId = from[i].ActionId;
+                                actionModule.ActionCollection = new List<JsonAction>();
+                                actionModule.ActionCollection.Add(action);
+                                to.Add(actionModule);
+                            }
                         }
 
                     }
