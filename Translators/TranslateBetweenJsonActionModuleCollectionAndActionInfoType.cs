@@ -10,7 +10,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Translators
 {
     public static class TranslateBetweenJsonActionModuleCollectionAndActionInfoType
     {
-        public static List<JsonActionModule> ServiceToBusiness(ActionsGetAllDTOType[] from)
+        public static List<JsonActionModule> ServiceToBusiness(Common.ServiceProxies.UserManagement.ActionsGetAllDTOType[] from)
         {
             List<JsonActionModule> to = new List<JsonActionModule>();
             List<int> moduleIds = new List<int>();
