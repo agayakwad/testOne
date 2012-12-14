@@ -14,7 +14,7 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests
         public bool IsArchived { get; set; }
 
         [DataMember]
-        public int[] UserIds { get; set; } 
+        public int[] Ids { get; set; }  
 
     }
 }

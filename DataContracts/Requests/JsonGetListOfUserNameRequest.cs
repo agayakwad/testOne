@@ -17,6 +17,8 @@ namespace HiRePro.JSONServiceLayer.UserManagement.DataContracts.Requests {
         [DataMember]
         public JsonUsersNameRequest CommonNameRequest { get; set; }
 
+        [DataMember]
+        public bool IsForTransaction { get; set; } 
 
         #endregion
     }
