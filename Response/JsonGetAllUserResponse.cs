@@ -17,12 +17,11 @@ namespace HiRePro.JSONServiceLayer.UserManagement.Response
             get;
             set;
         }
+
         [DataMember]
-        public int RecordCount
-        {
+        public int RecordCount{
             get;
-            set;
-        }
+            set;}
 
     }
 }
